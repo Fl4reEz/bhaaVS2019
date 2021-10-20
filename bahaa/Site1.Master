@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="bahaa.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1 {
+            height: 286px;
+        }
+    </style>
+</head>
+<body style="height: 264px">
+    <form id="form1" runat="server">
+        <div>
+        </div>
+&nbsp;
+        <asp:Image ID="Image1" runat="server" Height="180px" ImageUrl="~/Pics/Sheesh2.jpg" Width="1830px" />
+        <br />
+        <br />
+&nbsp;<asp:Label ID="Label1" runat="server" Font-Size="Larger" ForeColor="#2C3347" Text="AestheticER"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Menu ID="Menu2" runat="server" Height="16px" Orientation="Horizontal" RenderingMode="Table" style="margin-left: 5px" Width="1839px" OnMenuItemClick="Menu2_MenuItemClick" BackColor="#3A3E63" ForeColor="White" IncludeStyleBlock="False">
+            <Items>
+                <asp:MenuItem Text="Home page" Value="Home page" NavigateUrl="~/Home page.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Aesthetics" Value="Aesthetics"></asp:MenuItem>
+                <asp:MenuItem Text="News" Value="News" NavigateUrl="~/News.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Sign up" Value="Sign up" NavigateUrl="~/Sign up.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Log In" Value="Log In" NavigateUrl="~/LogIN.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About us" Value="About us" NavigateUrl="~/About us.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/ShowUsers.aspx" Text="Users" Value="Users"></asp:MenuItem>
+            </Items>
+            <StaticItemTemplate>
+                <%# Eval("Text") %>
+            </StaticItemTemplate>
+        </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
